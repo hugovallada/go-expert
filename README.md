@@ -47,3 +47,23 @@ Linguagem capaz de detectar Race Conditions;
 Deploy absurdamente simples;
 Linguagem com baixa curva de aprendizado;
 ```
+
+# RUNTIME
+```
+Tudo que precisa para rodar o Go está na runtime
+Runtime + Código = Arquivo Binário
+Pode escolher a plataforma para onde vai buildar
+
+go build -> gera o binário
+GOOS=windows go build -> gera um binário para o windows
+GOOS=darwin GOARCH=arm64 go build -> gera um binário para mac
+
+go tool dist list -> Lista todas as distribuições possíveis
+
+Se tiver um módulo, não precisa passar qual o arquivo tem a função main.go, só rodar go build.
+
+go build -o novo_nome_binario -> -o = output, muda o nome do arquivo binário
+
+é possível reduzir o tamanho do binário, passando algumas flags
+
+```
