@@ -1,0 +1,30 @@
+{{ template "header.html" }}
+
+<h1>Cursos FullCycle</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Horas</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range . }}
+        {{ if eq .CargaHoraria 40}}
+        <tr>
+            <td><b>{{ .Nome | ToUpper }}</b></td>
+            <td><b>{{ .CargaHoraria }}</b></td>
+        </tr>
+
+        {{else}}
+        <tr>
+            <td>{{ .Nome | ToUpper }}</td>
+            <td>{{ .CargaHoraria }}</td>
+        </tr>
+        {{end}}
+        {{ end }}
+    </tbody>
+</table>
+
+{{ template "footer.html" }}

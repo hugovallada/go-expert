@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+</head>
+
+<body>
+    <h1>Cursos FullCycle</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Horas</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range . }}
+            {{ if eq .CargaHoraria 40}}
+            <tr>
+                <td><b>{{ .Nome }}</b></td>
+                <td><b>{{ .CargaHoraria }}</b></td>
+            </tr>
+
+            {{else}}
+            <tr>
+                <td>{{ .Nome }}</td>
+                <td>{{ .CargaHoraria }}</td>
+            </tr>
+            {{end}}
+            {{ end }}
+        </tbody>
+    </table>
+</body>
+
+</html>
