@@ -129,7 +129,7 @@ func TestDeleteProduct(t *testing.T) {
 	assert.Nil(t, err)
 	db.Create(product)
 	productDB := NewProduct(db)
-	err = productDB.Delete(product)
+	err = productDB.Delete(product.ID.String())
 	assert.NoError(t, err)
 	product, err = productDB.FindById(product.ID.String())
 	assert.Error(t, err)
@@ -145,6 +145,6 @@ func TestDeleteProduct_ShouldReturnErrorWhenTheIdDoeNotExissts(t *testing.T) {
 	product, err := entity.NewProduct("Product 1", 10)
 	assert.Nil(t, err)
 	productDB := NewProduct(db)
-	err = productDB.Delete(product)
+	err = productDB.Delete(product.ID.String())
 	assert.Error(t, err)
 }
