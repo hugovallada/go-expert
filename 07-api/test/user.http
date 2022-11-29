@@ -1,0 +1,17 @@
+POST http://localhost:8000/users HTTP/1.1
+Content-type: application/json
+
+{
+    "name": "John Doe",
+    "email": "j@j.com",
+    "password": "Senha"
+}
+
+###
+POST http://localhost:8000/users/auth HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "j@j.com",
+    "password": "Senha"
+}
