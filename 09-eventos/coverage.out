@@ -1,0 +1,7 @@
+mode: set
+github.com/hugovallada/go-expert/fcutils/pkg/events/event_dispatcher.go:11.89,12.41 1 1
+github.com/hugovallada/go-expert/fcutils/pkg/events/event_dispatcher.go:19.2,20.12 2 1
+github.com/hugovallada/go-expert/fcutils/pkg/events/event_dispatcher.go:12.41,13.50 1 1
+github.com/hugovallada/go-expert/fcutils/pkg/events/event_dispatcher.go:13.50,14.31 1 1
+github.com/hugovallada/go-expert/fcutils/pkg/events/event_dispatcher.go:14.31,16.5 1 1
+github.com/hugovallada/go-expert/fcutils/pkg/events/event_dispatcher.go:23.44,27.2 1 1
