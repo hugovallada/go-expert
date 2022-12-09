@@ -1,0 +1,40 @@
+# Schema de objeto
+type Category {
+  id: ID!
+  name: String!
+  description: String
+  courses: [Course!]!
+}
+
+# Schema de objeto
+type Course {
+  id: ID!
+  name: String!
+  description: String
+  category: Category!
+}
+
+# Valor de entrada de uma mutation
+input NewCategory {
+  name: String!
+  description: String
+}
+
+# Valor de entrada de uma mutation
+input NewCourse {
+  name: String!
+  description: String
+  categoryId: ID!
+}
+
+# Tipos de consulta
+type Query {
+  categories: [Category!]!
+  courses: [Course!]!
+}
+
+# Mutation = Alteração/Adição
+type Mutation {
+  createCategory(input: NewCategory!): Category!
+  createCourse(input: NewCourse!): Course!
+}
