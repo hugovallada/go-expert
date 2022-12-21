@@ -46,7 +46,7 @@ func main() {
 			case fileName := <-errorFileUpload:
 				uploadControl <- struct{}{}
 				wg.Add(1)
-				uploadFile(fileName, uploadControl, errorFileUpload)
+				go uploadFile(fileName, uploadControl, errorFileUpload)
 			}
 		}
 	}()
